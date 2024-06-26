@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td,
+        th {
+            text-align: center;
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px 30px;
+        }
+
+    </style>
+</head>
+<body>
+<h2>zipcode: {{zipcode}}</h2>
+<table>
+    <thead>
+    <tr>
+        <th>zipcode</th>
+        <th>name</th>
+        <th>address</th>
+        <th>introduction</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in rows %}
+    <tr>
+        <td>{{ item.zipcode }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.address }}</td>
+        <td>{{ item.introduction }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>
+
